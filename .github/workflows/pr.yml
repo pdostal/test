@@ -1,0 +1,11 @@
+name: ci
+on: pull_request
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    name: "CI"
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: |
+        echo 'test'

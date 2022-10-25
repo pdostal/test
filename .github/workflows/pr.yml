@@ -6,8 +6,9 @@ jobs:
     name: "CI"
     steps:
     - uses: actions/checkout@v2
-    - name: Install dependencies
+    - name: Play with shell
       run: |
         echo 'Hello!'
         echo -en 'test\ttest\ntest\ttest\n'
+        echo "::error file=README.md,line=4::Hey, there is typo in your markdown"
         echo "That's it."

@@ -15,5 +15,6 @@ jobs:
         echo 'Hello!'
         echo "${GITHUB_ACTIONS}"
         echo -en 'test\ttest\ntest\ttest\n'
-        echo "::error file=README.md,line=4::Hey, there is typo in your markdown"
+        echo "::error file=README.md,line=5::Hey, there is typo in your markdown"
         echo "That's it."
+        exit 1

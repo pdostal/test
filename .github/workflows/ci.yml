@@ -13,5 +13,6 @@ jobs:
     - name: Play with shell
       run: |
         echo 'Hello!'
+        echo "::error file=README.md::Hey, there is error."
         echo "That's it."
         exit 1

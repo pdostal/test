@@ -1,5 +1,9 @@
 name: ci
-on: [push, pull_request]
+on:
+  push:
+    branches:
+     - 'main'
+  pull_request:
 jobs:
   static:
     runs-on: ubuntu-latest
@@ -9,6 +13,6 @@ jobs:
     - name: Play with shell
       run: |
         echo 'Hello!'
-        echo -en 'test\ttest\ntest\ttest\n'
-        echo "::error file=README.md,line=4::Hey, there is typo in your markdown"
+        echo "::error file=README.md::Hey, there is error."
         echo "That's it."
+        exit 1
